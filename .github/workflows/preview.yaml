@@ -9,16 +9,15 @@ on:
 jobs:
   Test-NextJS:
   runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-        run: npm install --global vercel@latest
-      - name: Install dependencies
-        run: npm install
-      - name: run tests
-        run: npm run test
+  steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+    - name: Install dependencies
+      run: npm install
+    - name: run tests
+      run: npm run test
   Deploy-Preview:
     runs-on: ubuntu-latest
     steps:
